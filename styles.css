@@ -215,3 +215,16 @@ html, body {
   text-align: right;
   padding: 1em;
 }
+
+.main-header {
+  color: white;
+  background: url("http://dummyimage.com/800x300/00174a/aaaaaa.png") center / cover;
+}
+
+.status0 {
+  background: url("http://dummyimage.com/300x300/bb0/aaa.png") center;
+}
+
+.status1 {
+  background: url("http://dummyimage.com/300x300/0bb/aaa.png") center;
+}
