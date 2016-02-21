@@ -1,0 +1,19 @@
+body {
+  background-color: #ccc;
+}
+.demo-layout-transparent {
+  background: url('http://dummyimage.com/800x250/00174a/aaaaaa.png') center / cover;
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  color: white;
+}
+
+.status0 {
+
+}
+
+.status1 {
+  background-image: url("http://dummyimage.com/400x200/00174a/aaaaaa.png");
+}
+
