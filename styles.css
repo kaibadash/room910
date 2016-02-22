@@ -217,14 +217,23 @@ html, body {
 }
 
 .main-header {
-  color: white;
-  background: url("http://dummyimage.com/800x300/00174a/aaaaaa.png") center / cover;
+  background: url("images/bg.jpg") center / cover;
+}
+.main-header h3 {
+  color: #655;
+  font-size: 5em;
 }
 
 .status0 {
-  background: url("http://dummyimage.com/300x300/bb0/aaa.png") center;
+  background-image: url("images/ng.jpg");
+  background-repeat: no-repeat;
 }
 
 .status1 {
-  background: url("http://dummyimage.com/300x300/0bb/aaa.png") center;
+  background-image: url("images/ok.jpg") ;
+  background-repeat: no-repeat;
+}
+
+.status0 .material-icons {
+  color: #ee5;
 }

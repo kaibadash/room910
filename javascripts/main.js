@@ -15,7 +15,7 @@ var vue = new Vue({
     var self = this;
     var humanSensorDataList = new Array();
     var milkcocoa = new MilkCocoa("blueiks5jeta.mlkcca.com");
-    milkcocoa.dataStore("human_sensor").stream().sort("desc").size(10).next(function(err, dataList) {
+    milkcocoa.dataStore("human_sensor").stream().sort("asc").size(10).next(function(err, dataList) {
       // Data format:
       // {"id": "XXX","timestamp":1456045078635,"value":"{\"v\":\"1\"}"}
       self.humanSensorDataList = self.humanSensorDataList.concat(dataList);

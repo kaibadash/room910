@@ -28,8 +28,8 @@
         <div class="mdl-layout__tab-panel is-active" id="overview">
         <div v-for="sensorData in humanSensorDataList">
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp status{{sensorData.value.v}}">
-          <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white">
-          <i class="material-icons">{{sensorData.value.v == "1" ? "thumb_up" : "warning"}}</i>
+          <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone  mdl-color-text--white">
+          <i class="material-icons">{{sensorData.value.v == "1" ? "" : "warning"}}</i>
           </header>
 
           <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
@@ -50,7 +50,7 @@
       <footer class="mdl-mega-footer">
       <div class="mdl-mega-footer--bottom-section">
         <ul class="mdl-mega-footer--link-list">
-          <li><a href="#">GitHub</a></li>
+          <li><a href="https://github.com/kaibadash/room910">GitHub</a></li>
         </ul>
       </div>
       </footer>
