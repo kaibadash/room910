@@ -224,14 +224,12 @@ html, body {
   font-size: 5em;
 }
 
-.status0 {
-  background-image: url("images/ng.jpg");
-  background-repeat: no-repeat;
+.status0 header {
+  background: url("images/ok.jpg") center / auto;
 }
 
-.status1 {
-  background-image: url("images/ok.jpg") ;
-  background-repeat: no-repeat;
+.status1 header {
+  background: url("images/ng.jpg") center / auto;
 }
 
 .status0 .material-icons {

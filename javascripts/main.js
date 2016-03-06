@@ -15,10 +15,16 @@ var vue = new Vue({
     var self = this;
     var humanSensorDataList = new Array();
     var milkcocoa = new MilkCocoa("blueiks5jeta.mlkcca.com");
-    milkcocoa.dataStore("human_sensor").stream().next(function(err, dataList) {
+    var dataStore = milkcocoa.dataStore("human_sensor")
+    dataStore.stream().next(function(err, dataList) {
+      console.log("get next data", dataList);
       // Data format:
       // {"id": "XXX","timestamp":1456045078635,"value":"{\"v\":\"1\"}"}
       self.humanSensorDataList = self.humanSensorDataList.concat(dataList.reverse());
+    });
+    dataStore.on("push", function(data) {
+      console.log("new data", data);
+      self.humanSensorDataList.unshift(data);
     });
   }
 });
