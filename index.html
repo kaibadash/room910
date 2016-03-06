@@ -29,12 +29,12 @@
         <div v-for="sensorData in humanSensorDataList">
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp status{{sensorData.value.v}}">
           <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone  mdl-color-text--white">
-          <i class="material-icons">{{sensorData.value.v == "1" ? "" : "warning"}}</i>
+          <i class="material-icons">{{sensorData.value.v == "1" ? "warning":"" }}</i>
           </header>
 
           <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
             <div class="mdl-card__supporting-text">
-              <h4>{{sensorData.value.v == "1" ? "給湯室が空きました" : "給湯室は使用中です"}}</h4>
+              <h4>{{sensorData.value.v == "1" ? "給湯室は使用中です" : "給湯室が空きました" }}</h4>
               {{sensorData.timestamp | rerativeTime}}秒前 にチェックしました。
             </div>
             <div class="mdl-card__actions">
