@@ -34,6 +34,7 @@ var vue = new Vue({
     });
     dataStore.on("push", function(data) {
       self.humanSensorDataList.unshift(data);
+      self.using = self.humanSensorDataList[0].value == "1";
     });
   }
 });
