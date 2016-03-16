@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="human_sensor_data_list">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.grey-blue.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="stylesheet/styles.css">
+    <link rel="icon" type="image/png" href="images/favicon{{using ? 1 : 0}}.png">
   </head>
 
-  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base {{using ? 'using':''}}">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary main-header">
       <div class="mdl-layout--large-screen-only mdl-layout__header-row">
@@ -25,7 +25,7 @@
       </div>
       </header>
 
-      <main id="human_sensor_data_list" class="mdl-layout__content">
+      <main class="mdl-layout__content">
         <div class="mdl-layout__tab-panel is-active" id="overview">
         <div v-for="sensorData in humanSensorDataList">
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp status{{sensorData.value.v}}">

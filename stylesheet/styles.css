@@ -217,7 +217,7 @@ html, body {
 }
 
 .main-header {
-  background: url("images/bg.jpg") center / cover;
+  background: url("../images/bg.jpg") center / cover;
 }
 .main-header h3 {
   color: #655;
@@ -225,13 +225,17 @@ html, body {
 }
 
 .status0 header {
-  background: url("images/ok.jpg") center / auto;
+  background: url("../images/ok.jpg") center / auto;
 }
 
 .status1 header {
-  background: url("images/ng.jpg") center / auto;
+  background: url("../images/ng.jpg") center / auto;
 }
 
 .status0 .material-icons {
   color: #ee5;
+}
+
+.using {
+  background-color: #fff000 !important;
 }

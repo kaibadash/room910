@@ -9,6 +9,7 @@ Vue.filter("rerativeTime", function (unixtime) {
 var vue = new Vue({
   el: "#human_sensor_data_list",
   data: {
+    using: false,
     humanSensorDataList: []
   },
   created: function() {
@@ -21,6 +22,7 @@ var vue = new Vue({
       // Data format:
       // {"id": "XXX","timestamp":1456045078635,"value":"{\"v\":\"1\"}"}
       self.humanSensorDataList = self.humanSensorDataList.concat(dataList.reverse());
+      self.using = self.humanSensorDataList[0].value == "1";
       setInterval(function() {
         var target = self.humanSensorDataList[0];
         // 描画を更新したいだけなのだが…
@@ -28,10 +30,12 @@ var vue = new Vue({
             data.timestamp++;
             data.timestamp--;
         }
-      }, 10000);
+        self.using = Math.random() <  0.5;
+        console.log(self.using);
+
+      }, 1000);
     });
     dataStore.on("push", function(data) {
-      console.log("new data", data);
       self.humanSensorDataList.unshift(data);
     });
   }
