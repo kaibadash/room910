@@ -21,6 +21,14 @@ var vue = new Vue({
       // Data format:
       // {"id": "XXX","timestamp":1456045078635,"value":"{\"v\":\"1\"}"}
       self.humanSensorDataList = self.humanSensorDataList.concat(dataList.reverse());
+      setInterval(function() {
+        var target = self.humanSensorDataList[0];
+        // 描画を更新したいだけなのだが…
+        for (data of self.humanSensorDataList) {
+            data.timestamp++;
+            data.timestamp--;
+        }
+      }, 10000);
     });
     dataStore.on("push", function(data) {
       console.log("new data", data);
