@@ -30,9 +30,6 @@ var vue = new Vue({
             data.timestamp++;
             data.timestamp--;
         }
-        self.using = Math.random() <  0.5;
-        console.log(self.using);
-
       }, 1000);
     });
     dataStore.on("push", function(data) {
