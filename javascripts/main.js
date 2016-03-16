@@ -22,7 +22,7 @@ var vue = new Vue({
       // Data format:
       // {"id": "XXX","timestamp":1456045078635,"value":"{\"v\":\"1\"}"}
       self.humanSensorDataList = self.humanSensorDataList.concat(dataList.reverse());
-      self.using = self.humanSensorDataList[0].value == "1";
+      self.using = self.humanSensorDataList[0].value.v == "1";
       setInterval(function() {
         var target = self.humanSensorDataList[0];
         // 描画を更新したいだけなのだが…
@@ -30,11 +30,11 @@ var vue = new Vue({
             data.timestamp++;
             data.timestamp--;
         }
-      }, 1000);
+      }, 10000);
     });
     dataStore.on("push", function(data) {
       self.humanSensorDataList.unshift(data);
-      self.using = self.humanSensorDataList[0].value == "1";
+      self.using = self.humanSensorDataList[0].value.v == "1";
     });
   }
 });
