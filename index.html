@@ -27,6 +27,21 @@
 
       <main class="mdl-layout__content">
         <div class="mdl-layout__tab-panel is-active" id="overview">
+          <div v-for="sensorData in loudnessSensorDataList">
+            <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp status{{sensorData.value.v}}">
+
+            <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--8-col-tablet mdl-cell--8-col-phone">
+              <div class="mdl-card__supporting-text">
+                <h4>{{sensorData.value.state == "2" ? "コーヒーメーカーは使用中です" : "コーヒーメーカーは使用されていません" }}</h4>
+                {{sensorData.timestamp | rerativeTime}}秒前 にチェックしました。
+              </div>
+              <div class="mdl-card__actions">
+                {{sensorData.timestamp | datetime}}
+              </div>
+            </div>
+            </section>
+          </div>
+
         <div v-for="sensorData in humanSensorDataList">
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp status{{sensorData.value.v}}">
           <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone  mdl-color-text--white">
