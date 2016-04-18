@@ -236,6 +236,10 @@ html, body {
   color: #ee5;
 }
 
-.using {
+.using1 {
+  background-color: #faa !important;
+}
+.using_coffee {
+  background-image: url("../images/coffee.png");
   background-color: #faa !important;
 }
